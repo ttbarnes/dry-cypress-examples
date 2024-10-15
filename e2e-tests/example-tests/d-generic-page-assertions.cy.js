@@ -4,6 +4,9 @@ import { successPage } from '../pages';
 
 const baseUrl = Cypress.config('baseUrl');
 
+// TODO
+// TODO - "better approach" / before and after
+
 describe('Example - Generic page assertions', () => {
   /**
    * NOTE:
@@ -28,9 +31,12 @@ describe('Example - Generic page assertions', () => {
       continueButton().click();
     });
 
-    genericPageAssertions({ expectedMainHeading: 'Form submission success' });
+    genericPageAssertions({
+      expectedMainHeading: 'Form submission success',
+      assertFeedbackLink: false
+    });
 
-    describe('page tests', () => {
+    describe('page specific tests', () => {
       it('should render `thank you` copy', () => {
         cy.assertText(successPage.thankYou(), 'Thank you for submitting the form.');
       });

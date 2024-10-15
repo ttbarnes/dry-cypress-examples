@@ -13,7 +13,7 @@ describe('Example - Link assertions', () => {
         expect(text.trim()).equal('Feedback');
       });
 
-      feedbackLink().should('have.attr', 'href', 'https://example.com');
+      feedbackLink().should('have.attr', 'href', '/feedback');
 
     });
   });
@@ -22,7 +22,7 @@ describe('Example - Link assertions', () => {
     it('should render a feedback link', () => {
       cy.assertLink({
         selector: feedbackLink(),
-        expectedHref: 'https://example.com',
+        expectedHref: '/feedback',
         expectedText: 'Feedback'
       });
     });

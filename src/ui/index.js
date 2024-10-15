@@ -24,6 +24,10 @@ app.get('/success', (req, res) =>
   res.sendFile(path.join(__dirname, './src/ui/success.html'))
 );
 
+app.get('/feedback', (req, res) =>
+  res.sendFile(path.join(__dirname, './src/ui/feedback.html'))
+);
+
 app.listen(PORT, () => {
   console.info(`🚀 Server running on port ${PORT}`);
 });

@@ -3,7 +3,7 @@ import { feedbackLink } from '../../../partials';
 const assertFeedbackLink = () => {
   cy.assertLink({
     selector: feedbackLink(),
-    expectedHref: 'https://example.com',
+    expectedHref: '/feedback',
     expectedText: 'Feedback'
   });
 };
