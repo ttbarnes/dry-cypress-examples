@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang='en'>
 
-<head>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
-  <title>DRY Cypress examples</title>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>DRY Cypress examples</title>
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-</head>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+  </head>
 
-<body>
-  <h1 data-cy="main-heading">Dry Cypress examples</h1>
+  <body>
+    <h1 data-cy="main-heading">Dry Cypress examples</h1>
 
-  <form>
-    <div class="row">
-      <div class="four columns">
+    <form method="POST">
 
-        <label for="currency">Select a currency</label>
+      <div class="row">
+        <div class="four columns">
 
-        <select class="u-full-width" id="currency">
-          <option />
-          <option value="Euro">Euro</option>
-          <option value="JPY">Japanese Yen</option>
-          <option value="GBP">Pound sterling</option>
-          <option value="USD">United States Dollar</option>
-          
-        </select>
+          <label for="currency">Select a currency</label>
 
+          <select class="u-full-width" id="currency">
+            <option />
+            <option value="Euro">Euro</option>
+            <option value="JPY">Japanese Yen</option>
+            <option value="GBP">Pound sterling</option>
+            <option value="USD">United States Dollar</option>
+            
+          </select>
+
+        </div>
       </div>
-    </div>
 
-    <button class="button-primary" type="submit" data-cy="continue-button">Continue</button>
-  </form>
-</body>
+      <button class="button-primary" type="submit" data-cy="continue-button">Continue</button>
+
+    </form>
+  </body>
 
 </html>
