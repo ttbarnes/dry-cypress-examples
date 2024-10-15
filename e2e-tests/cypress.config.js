@@ -5,6 +5,6 @@ export default defineConfig({
   viewportHeight: 1000,
   e2e: {
     baseUrl: 'http://localhost:3000',
-    specPattern: '**/*.cy.js'
+    specPattern: 'example-tests/*.cy.js'
   }
 });
