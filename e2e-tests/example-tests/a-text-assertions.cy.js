@@ -1,4 +1,4 @@
-import { mainHeading, continueButton } from '../partials';
+import { continueButton, mainHeading } from '../partials';
 
 const baseUrl = Cypress.config('baseUrl');
 
@@ -10,7 +10,7 @@ describe('Example - Text assertions', () => {
   describe('vanilla approach', () => {
     it('should render a main heading', () => {
       mainHeading().invoke('text').then((text) => {
-        expect(text.trim()).equal('Dry Cypress examples');
+        expect(text.trim()).equal('DRY Cypress examples');
       });
     });
 
@@ -21,15 +21,17 @@ describe('Example - Text assertions', () => {
     });
   });
 
-  decsribe('DRY, simpler approach', () => {
+  describe('DRY, simpler approach', () => {
     it('should render a main heading', () => {
-      cy.assertText(mainHeading(), 'Dry Cypress examples');
+      cy.assertText(mainHeading(), 'DRY Cypress examples');
     });
 
     it('should render a continue button', () => {
       cy.assertText(continueButton(), 'Continue');
     });
-  });
 
-  // TODO: cy.assertContinueButton();
+    it('should render a continue button - better approach', () => {
+      cy.assertContinueButton();
+    });
+  });
 });
