@@ -83,5 +83,5 @@ npm run dev
 - In a separate terminal, open up the Cypress GUI
 
 ```bash
-cd e2e-tests && npx cypress open .
+npx cypress open .
 ```
