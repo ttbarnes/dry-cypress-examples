@@ -15,19 +15,27 @@
     <h1 data-cy="main-heading">DRY Cypress examples</h1>
 
     <div class="row">
-      <div class="four columns">
+      <div class="three columns">
 
         <form method="POST">
 
-          <label for="currency">Select a currency</label>
+          <div class="row">
+            <label for="currency">Select a currency</label>
 
-          <select class="u-full-width" id="currency">
-            <option />
-            <option value="Euro">Euro</option>
-            <option value="JPY">Japanese Yen</option>
-            <option value="GBP">Pound sterling</option>
-            <option value="USD">United States Dollar</option>
-          </select>
+            <select class="u-two-thirds" id="currency">
+              <option />
+              <option value="Euro">Euro</option>
+              <option value="JPY">Japanese Yen</option>
+              <option value="GBP">Pound sterling</option>
+              <option value="USD">United States Dollar</option>
+            </select>
+          </div>
+
+          <div class="row">
+            <label for="reason">Reason for payment</label>
+
+            <input type="text" id="reason" class="u-full-width" data-cy="reason" />
+          </div>
 
           <button class="button-primary" type="submit" data-cy="continue-button">Continue</button>
 

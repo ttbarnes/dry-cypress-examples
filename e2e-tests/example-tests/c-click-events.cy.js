@@ -7,11 +7,13 @@ describe('Example - Click events', () => {
     cy.visit(baseUrl);
   });
 
-  describe('when clicking the feedback link', () => {
-    it('should redirect to `/feedback`', () => {
-      feedbackLink().click();
+  context('vanilla approach', () => {
+    describe('when clicking the feedback link', () => {
+      it('should redirect to `/feedback`', () => {
+        feedbackLink().click();
 
-      cy.url().should('eq', `${baseUrl}/feedback`);
+        cy.url().should('eq', `${baseUrl}/feedback`);
+      });
     });
   });
 
