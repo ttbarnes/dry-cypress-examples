@@ -27,20 +27,11 @@ cy.get('[data-cy="main-heading"]').invoke('text').then((text) => {
 
 This is quite a lot of methods and lines of code for a simple, strict equality text assertion.
 
-Also, it should be safe to assume that every page will have a heading - otherwise, there are more than likely to be design/accessibility issues.
-
 Instead, a command could be created and this could simply become:
 
 ```js
 cy.assertText(mainHeading(), 'The landing page');
 ```
-
-By creating an `assertText` command, we can ensure that:
-
-- Every assertion asserts the text with strict equality, instead of "should contain".
-- Individual E2E tests have only 1 line per assertion instead of 3 lines.
-- Tests are DRY.
-- If Cypress's `invoke('text')` or `text.trim()` methods change, we only need to update it in one place.
 
 The assertion could even become the following - avoiding the need to import the `mainHeading` selector in individual tests.
 
@@ -48,11 +39,22 @@ The assertion could even become the following - avoiding the need to import the 
 cy.assertMainHeadingText('The landing page');
 ```
 
+By creating such commands, we can ensure that:
+
+- Every assertion asserts the text with strict equality, instead of "should contain".
+- Individual E2E tests have only 1 line per assertion instead of 3 lines.
+- Tests are DRY.
+- Unlikely, but if Cypress's `invoke('text')` or `text.trim()` methods change, we only need to update it in one place.
+
 This might seem minor at first glance, but as an application grows, we could be repeating the same assertions throughout every test, with the only difference being the actual text.
 
 For example, 1x test spec could contain 4x lines of code to assert a single piece of text. If you have 200 tests, this means 800 lines of code, when this could just be 200 lines of code - 1 line for each spec.
 
-##  Prerequisite
+It is best to introduce such approaches as early as possible. In a "medium sized", historic project, I recently introduced a generic `assertText` command which removed just over 2,000 lines of code.
+
+This approach can be adapted to many other areas to be DRY - this repo aims to demonstrate these with simple examples.
+
+## Prerequisite
 
 - Node version 18 or higher with corresponding npm.
 - Run `npm install` or `yarn install` in the root directory.
