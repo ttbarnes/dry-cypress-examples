@@ -7,7 +7,7 @@ describe('Example - Text assertions', () => {
     cy.visit(baseUrl);
   });
 
-  describe('vanilla approach', () => {
+  context('vanilla approach', () => {
     it('should render a main heading', () => {
       mainHeading().invoke('text').then((text) => {
         expect(text.trim()).equal('DRY Cypress examples');
@@ -21,7 +21,7 @@ describe('Example - Text assertions', () => {
     });
   });
 
-  describe('DRY, simpler approach', () => {
+  context('DRY, simpler approach', () => {
     it('should render a main heading', () => {
       cy.assertText(mainHeading(), 'DRY Cypress examples');
     });

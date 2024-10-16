@@ -7,7 +7,7 @@ describe('Example - Link assertions', () => {
     cy.visit(baseUrl);
   });
 
-  describe('vanilla approach', () => {
+  context('vanilla approach', () => {
     it('should render a feedback link', () => {
       feedbackLink().invoke('text').then((text) => {
         expect(text.trim()).equal('Feedback');
@@ -18,7 +18,7 @@ describe('Example - Link assertions', () => {
     });
   });
 
-  describe('DRY, simpler approach', () => {
+  context('DRY, simpler approach', () => {
     it('should render a feedback link', () => {
       cy.assertLink({
         selector: feedbackLink(),
