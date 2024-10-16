@@ -1,4 +1,4 @@
-import genericPageAssertions from '../dry-assertions/generic-page';
+import commonPageAssertions from '../dry-assertions/common-page';
 import { anyQuestions, continueButton, thankYou } from '../partials';
 import { successPage } from '../pages';
 
@@ -7,7 +7,7 @@ const baseUrl = Cypress.config('baseUrl');
 // TODO
 // TODO - "better approach" / before and after
 
-describe('Example - Generic page assertions', () => {
+describe('Example - Common page assertions', () => {
   /**
    * NOTE:
    * For the purpose of these examples, i've kept 2x pages in 1x spec,
@@ -21,7 +21,7 @@ describe('Example - Generic page assertions', () => {
       cy.visit(baseUrl);
     });
 
-    genericPageAssertions({ expectedMainHeading: 'DRY Cypress examples' });
+    commonPageAssertions({ expectedMainHeading: 'DRY Cypress examples' });
   });
 
   describe('Success page', () => {
@@ -31,7 +31,7 @@ describe('Example - Generic page assertions', () => {
       continueButton().click();
     });
 
-    genericPageAssertions({
+    commonPageAssertions({
       expectedMainHeading: 'Form submission success',
       assertFeedbackLink: false
     });

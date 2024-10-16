@@ -1,20 +1,20 @@
 import { continueButton, feedbackLink, mainHeading } from '../partials';
 
 /**
- * genericPageAssertions
- * Assert generic elements of a page.
- * These are generic elements that are on every page,
+ * commonPageAssertions
+ * Assert common elements in a page.
+ * These are elements that are repeated on every page, or the majority of pages.
  * with the only difference being for example, headings and button copy.
  * @param {String} expectedContinueButton: Expected "continue" button text. 
  * @param {String} expectedMainHeading: Expected "main heading" text".
  * @param {Boolean} assertFeedbackLink: Flag for asserting the feedback link.
  */
-const genericPageAssertions = ({
+const commonPageAssertions = ({
   expectedContinueButton = 'Continue',
   expectedMainHeading,
   assertFeedbackLink = true
 }) => {
-  describe('generic page assertions', () => {
+  describe('common page assertions', () => {
     // it should render a header
 
     it('should render a main heading', () => {
@@ -39,4 +39,4 @@ const genericPageAssertions = ({
   });
 };
 
-export default genericPageAssertions;
+export default commonPageAssertions;

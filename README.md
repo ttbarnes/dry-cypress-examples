@@ -64,7 +64,7 @@ This repo aims to demonstrate such approaches with simple "before and after" exa
 | [cy.assertText](https://github.com/ttbarnes/dry-cypress-examples/blob/main/e2e-tests/cypress/support/commands/assertText.js)  | [a-text-assertions.cy.js](https://github.com/ttbarnes/dry-cypress-examples/blob/main/e2e-tests/example-tests/a-text-assertions.cy.js)    |
 | [cy.assertLink](https://github.com/ttbarnes/dry-cypress-examples/blob/main/e2e-tests/cypress/support/commands/assertLink.js)  | [b-link-assertions.cy.js](https://github.com/ttbarnes/dry-cypress-examples/blob/main/e2e-tests/example-tests/b-link-assertions.cy.js)    |
 | [cy.clickCommonLink](https://github.com/ttbarnes/dry-cypress-examples/blob/main/e2e-tests/cypress/support/commands/clickFeedbackLink.js)  | [c-click-events.cy.js](https://github.com/ttbarnes/dry-cypress-examples/blob/main/e2e-tests/example-tests/c-click-events.cy.js)    |
-| [genericPageAssertions](https://github.com/ttbarnes/dry-cypress-examples/blob/main/e2e-tests/dry-assertions/generic-page.js)  | [d-generic-page-assertions.cy.js](https://github.com/ttbarnes/dry-cypress-examples/blob/main/e2e-tests/example-tests/d-generic-page-assertions.cy.js)    |
+| [commonPageAssertions](https://github.com/ttbarnes/dry-cypress-examples/blob/main/e2e-tests/dry-assertions/common-page.js)  | [d-common-page-assertions.cy.js](https://github.com/ttbarnes/dry-cypress-examples/blob/main/e2e-tests/example-tests/d-common-page-assertions.cy.js)    |
 
 ## Prerequisite
 
