@@ -79,7 +79,7 @@ This repo aims to demonstrate such approaches with simple "before and after" exa
 npm run dev
 ```
 
-- Open up the Cypress GUI
+- In a separate terminal, open up the Cypress GUI
 
 ```bash
 cd e2e-tests && npx cypress open .
