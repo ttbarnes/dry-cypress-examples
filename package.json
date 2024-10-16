@@ -1,7 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "dev": "nodemon ./src/ui/index.js",
+    "dev": "nodemon --experimental-specifier-resolution=node ./src/ui/server/index.js",
     "e2e": "npx cypress open ."
   },
   "devDependencies": {
