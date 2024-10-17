@@ -9,15 +9,16 @@ The following approaches are demonstrated with "before and after" examples:
 - Text assertions
 - Link assertions
 - Click events
-- Generic page assertions
+- Enter text
+- Common page assertions
 
 ## Why
 
-In large applications, cypress E2E tests can become very complex.
+In large applications, cypress E2E tests can become very complex, time consuming and hard to maintain.
 
 Some tests can become repeated - for example with common elements, assertions and user journeys.
 
-A simple example would be the following. To assert that some text equals X, you could do the following:
+A simple example would be the following. To assert that some text equals X, we could do this:
 
 ```js
 cy.get('[data-cy="main-heading"]').invoke('text').then((text) => {
@@ -51,7 +52,7 @@ It might seem minor at first glance. Such approaches can be adapted to many othe
 
 Additionally, as an application grows, we could otherwise be repeating the same assertions throughout multiple tests. With text assertions, the only differences between tests are the selector and/or expected text.
 
-For example, 1x test spec could contain 4x lines of code to assert a single piece of text. If you have 200 tests, this means 800 lines of code. Instead, this could be 200 lines of code; 1 line for each spec.
+For example, 1x test spec could contain 4x lines of code to assert a single piece of text. If we have 200 tests, this means 800 lines of code. Instead, this could be 200 lines of code; 1 line for each spec.
 
 It is best to introduce such approaches as early as possible. As a real world example - in a "medium sized, historical project", I recently introduced a generic `assertText` command **which removed just over 2,000 lines of code**.
 
@@ -69,8 +70,8 @@ This repo aims to demonstrate such approaches with simple "before and after" exa
 
 ## Prerequisite
 
-- Node version 18 or higher with corresponding npm.
-- Run `npm install` or `yarn install` in the root directory.
+- Node version 22.8.0 or higher with corresponding npm.
+- Run `npm install` in the root directory. Yarn should also work.
 
 ## Running locally
 
