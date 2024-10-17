@@ -14,7 +14,6 @@ describe('Example - Link assertions', () => {
       });
 
       feedbackLink().should('have.attr', 'href', '/feedback');
-
     });
   });
 

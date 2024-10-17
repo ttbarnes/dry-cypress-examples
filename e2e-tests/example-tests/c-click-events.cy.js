@@ -17,11 +17,13 @@ describe('Example - Click events', () => {
     });
   });
 
-  describe('when clicking the feedback link - better approach', () => {
-    it(`should redirect to /feedback`, () => {
-      cy.clickFeedbackLink();
+  context('DRY, simpler approach', () => {
+    describe('when clicking the feedback link - better approach', () => {
+      it(`should redirect to /feedback`, () => {
+        cy.clickFeedbackLink();
 
-      cy.assertUrl(`${baseUrl}/feedback`);
+        cy.assertUrl(`${baseUrl}/feedback`);
+      });
     });
   });
 });
