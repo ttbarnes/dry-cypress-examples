@@ -21,7 +21,7 @@ describe('Example - Common page assertions', () => {
         mainHeading()
           .invoke('text')
           .then((text) => {
-            expect(text.trim()).equal('DRY Cypress examples');
+            expect(text.trim()).equal('DRY Cypress Examples');
           });
       });
 
@@ -79,7 +79,7 @@ describe('Example - Common page assertions', () => {
         cy.visit(baseUrl);
       });
 
-      commonPageAssertions({ expectedMainHeading: 'DRY Cypress examples' });
+      commonPageAssertions({ expectedMainHeading: 'DRY Cypress Examples' });
     });
 
     describe('Success page', () => {

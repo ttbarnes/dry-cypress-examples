@@ -1,4 +1,4 @@
-# DRY Cypress examples
+# DRY Cypress Examples
 
 Built with [Express](https://expressjs.com/) and [Cypress](https://www.cypress.io/).
 

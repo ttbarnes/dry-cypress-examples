@@ -12,7 +12,7 @@ describe('Example - Text assertions', () => {
       mainHeading()
         .invoke('text')
         .then((text) => {
-          expect(text.trim()).equal('DRY Cypress examples');
+          expect(text.trim()).equal('DRY Cypress Examples');
         });
     });
 
@@ -27,7 +27,7 @@ describe('Example - Text assertions', () => {
 
   context('DRY, simpler approach', () => {
     it('should render a main heading', () => {
-      cy.assertText(mainHeading(), 'DRY Cypress examples');
+      cy.assertText(mainHeading(), 'DRY Cypress Examples');
     });
 
     it('should render a continue button', () => {
