@@ -1,5 +1,5 @@
 export const landingPage = {
-  reason: () => cy.get('[data-cy="reason"]'),
+  reason: () => cy.get('[data-cy="reason"]')
 };
 
 export const successPage = {

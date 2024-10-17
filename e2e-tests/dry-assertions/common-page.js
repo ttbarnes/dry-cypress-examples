@@ -5,7 +5,7 @@ import { continueButton, feedbackLink, mainHeading } from '../partials';
  * Assert common elements in a page.
  * These are elements that are repeated on every page, or the majority of pages.
  * with the only difference being for example, headings and button copy.
- * @param {String} expectedContinueButton: Expected "continue" button text. 
+ * @param {String} expectedContinueButton: Expected "continue" button text.
  * @param {String} expectedMainHeading: Expected "main heading" text".
  * @param {Boolean} assertFeedbackLink: Flag for asserting the feedback link.
  */

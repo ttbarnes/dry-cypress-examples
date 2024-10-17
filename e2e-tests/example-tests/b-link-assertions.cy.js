@@ -9,9 +9,11 @@ describe('Example - Link assertions', () => {
 
   context('vanilla approach', () => {
     it('should render a feedback link', () => {
-      feedbackLink().invoke('text').then((text) => {
-        expect(text.trim()).equal('Feedback');
-      });
+      feedbackLink()
+        .invoke('text')
+        .then((text) => {
+          expect(text.trim()).equal('Feedback');
+        });
 
       feedbackLink().should('have.attr', 'href', '/feedback');
     });

@@ -1,4 +1,3 @@
-
 /**
  * assertText
  * Check that a text element exists with the correct text

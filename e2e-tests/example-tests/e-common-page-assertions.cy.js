@@ -1,5 +1,5 @@
 import commonPageAssertions from '../dry-assertions/common-page';
-import { anyQuestions, continueButton, mainHeading, thankYou } from '../partials';
+import { continueButton, mainHeading } from '../partials';
 import { successPage } from '../pages';
 
 const baseUrl = Cypress.config('baseUrl');
@@ -18,15 +18,19 @@ describe('Example - Common page assertions', () => {
       });
 
       it('should render a main heading', () => {
-        mainHeading().invoke('text').then((text) => {
-          expect(text.trim()).equal('DRY Cypress examples');
-        });
+        mainHeading()
+          .invoke('text')
+          .then((text) => {
+            expect(text.trim()).equal('DRY Cypress examples');
+          });
       });
 
       it('should render a continue button', () => {
-        continueButton().invoke('text').then((text) => {
-          expect(text.trim()).equal('Continue');
-        });
+        continueButton()
+          .invoke('text')
+          .then((text) => {
+            expect(text.trim()).equal('Continue');
+          });
       });
     });
 
@@ -38,23 +42,33 @@ describe('Example - Common page assertions', () => {
       });
 
       it('should render a main heading', () => {
-        mainHeading().invoke('text').then((text) => {
-          expect(text.trim()).equal('Form submission success');
-        });
+        mainHeading()
+          .invoke('text')
+          .then((text) => {
+            expect(text.trim()).equal('Form submission success');
+          });
       });
 
       it('should render a continue button', () => {
-        continueButton().invoke('text').then((text) => {
-          expect(text.trim()).equal('Continue');
-        });
+        continueButton()
+          .invoke('text')
+          .then((text) => {
+            expect(text.trim()).equal('Continue');
+          });
       });
 
       it('should render `thank you` copy', () => {
-        cy.assertText(successPage.thankYou(), 'Thank you for submitting the form.');
+        cy.assertText(
+          successPage.thankYou(),
+          'Thank you for submitting the form.'
+        );
       });
 
       it('should render `any questions` copy', () => {
-        cy.assertText(successPage.anyQuestions(), 'If you have any questions, please ...');
+        cy.assertText(
+          successPage.anyQuestions(),
+          'If you have any questions, please ...'
+        );
       });
     });
   });
@@ -82,11 +96,17 @@ describe('Example - Common page assertions', () => {
 
       describe('page specific tests', () => {
         it('should render `thank you` copy', () => {
-          cy.assertText(successPage.thankYou(), 'Thank you for submitting the form.');
+          cy.assertText(
+            successPage.thankYou(),
+            'Thank you for submitting the form.'
+          );
         });
 
         it('should render `any questions` copy', () => {
-          cy.assertText(successPage.anyQuestions(), 'If you have any questions, please ...');
+          cy.assertText(
+            successPage.anyQuestions(),
+            'If you have any questions, please ...'
+          );
         });
       });
     });

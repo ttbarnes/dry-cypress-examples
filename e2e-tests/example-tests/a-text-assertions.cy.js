@@ -9,15 +9,19 @@ describe('Example - Text assertions', () => {
 
   context('vanilla approach', () => {
     it('should render a main heading', () => {
-      mainHeading().invoke('text').then((text) => {
-        expect(text.trim()).equal('DRY Cypress examples');
-      });
+      mainHeading()
+        .invoke('text')
+        .then((text) => {
+          expect(text.trim()).equal('DRY Cypress examples');
+        });
     });
 
     it('should render a continue button', () => {
-      continueButton().invoke('text').then((text) => {
-        expect(text.trim()).equal('Continue');
-      });
+      continueButton()
+        .invoke('text')
+        .then((text) => {
+          expect(text.trim()).equal('Continue');
+        });
     });
   });
 

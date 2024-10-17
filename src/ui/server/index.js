@@ -18,9 +18,9 @@ app.use(morgan('dev'));
  * Tell the server to use static assets (CSS etc) from a specific directory.
  * In this case, we have some simple, boilerplate CSS.
  */
-app.use(express.static(path.join(__dirname, './src/ui/public'))); 
+app.use(express.static(path.join(__dirname, './src/ui/public')));
 
-// tell the server to use our routes. 
+// tell the server to use our routes.
 app.use('/', routes);
 
 // tell the server to listen to PORT.
